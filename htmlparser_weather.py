@@ -98,7 +98,7 @@ class weatherParser(HTMLParser.HTMLParser):
 			#	self.day_found = False
 				#print self.temperature
 				if self.string_cnt == 6:
-					self.result_str = u'目前天氣狀況,s%s,%s,溫度最%s,攝氏%s度,溫度最%s,攝氏%s度' %tuple(self.temperature)
+					self.result_str = u'目前天氣狀況,%s,%s,溫度最%s,攝氏%s度,溫度最%s,攝氏%s度' %tuple(self.temperature)
 				elif self.string_cnt == 7:
 					self.result_str =  u'目前天氣狀況,%s,%s,降雨機率%s,溫度最%s,攝氏%s度,溫度最%s,攝氏%s度' %tuple(self.temperature)
 				#print 'total %d' % self.string_cnt

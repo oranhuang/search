@@ -54,7 +54,6 @@ class newsParser(HTMLParser.HTMLParser):
 				print self.result_str5
 				print self.result_str6
 				#self.speakSpeechFromText(self.result_str.encode('utf8'))
-				#self.speakSpeechFromText('今日新聞,大立光站上3700大關創新天價 成台股多頭指標,F-永冠砸逾15億台中港建廠 創造400人就業機會,毅嘉Q2毛利率、獲利拚雙升 全年營收季季高,6月新車掛牌數衝破4.1萬台 創今年來單月新高,中國團隊接管王品？')
 				self.speakSpeechFromText(self.result_str1.encode('utf8'))
 				self.speakSpeechFromText(self.result_str2.encode('utf8'))
 				self.speakSpeechFromText(self.result_str3.encode('utf8'))

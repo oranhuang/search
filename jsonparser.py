@@ -33,5 +33,7 @@ filestr = f.read().decode('utf8')
 #print filestr
 if not((filestr.find(u'天氣')) == -1):
 	print 'weather'
+elif not((filestr.find(u'新聞')) == -1):
+	print 'news'
 	#if filestr.find('你好') == True:
 	#	print 'yes'

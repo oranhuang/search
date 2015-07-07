@@ -5,7 +5,7 @@
 echo "Converting Speech to Text..."
 wget -q -U "Mozilla/5.0" --post-file voice_cmd.flac --header "Content-Type: audio/x-flac; rate=16000" -O - "https://www.google.com/speech-api/v2/recognize?output=json&lang=zh-tw&key=AIzaSyCI4xaS6DWdzOCm-Vk3J8VNUlN16EmCnQY&client=chromium&maxresults=6&pfilter=2" > sst.json
 
-json_result=$(python jsonparser.py)
+json_result=$(python2 jsonparser.py)
 echo $json_result
 
 # TTS example
@@ -15,7 +15,11 @@ echo $json_result
 if [ "$json_result" == "weather" ];
 then
         echo "weather"
-	python htmlparser_weather.py 
+	python2 htmlparser_weather.py 
+elif [ "$json_result" == "news" ];
+then
+	echo "news"
+	python2 htmlparser_news.py
 else
         echo "error for output"
 fi
